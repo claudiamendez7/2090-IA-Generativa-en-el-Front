@@ -36,7 +36,7 @@
 }
 
 .encabezado__navegacion--elemento a:hover {
-  color: var(--gris-oscuro);
+  color: #8f0101;
 }
 
 .banner__img {
@@ -117,6 +117,10 @@ img {
   box-sizing: border-box;
   text-align: center;
 }
+.ofertas__cards--elemento:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
 
 .ofertas__cards--japon {
   background-image: url("./img/tokyo.png");
@@ -158,6 +162,11 @@ img {
   padding: 16px 48px;
   box-sizing: border-box;
   display: inline-block;
+  color: #fff;
+}
+.ofertas__card--boton:hover,
+.ofertas__card--boton:hover {
+  background-color: #e6554d;
 }
 
 .destinos__elemento--boton-texto,
@@ -167,6 +176,19 @@ img {
   font-weight: 700;
   line-height: 32px;
   color: var(--blanco, #fff);
+}
+.ofertas__card--boton a,
+.ofertas__card--boton button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .busca__categorias {
@@ -368,4 +390,70 @@ span.material-symbols-outlined {
   font-weight: 400;
   line-height: 28px;
   margin-bottom: 16px;
+}
+.footer__social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style-type: none;
+  padding: 0;
+}
+.footer__social-media-icons li {
+  display: inline-block;
+}
+.footer__social-media-icon {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer__social-media-icon:hover {
+  transform: scale(1.2);
+}
+
+.footer__social-media-icon[alt="Ícono de WhatsApp"]:hover {
+  filter: hue-rotate(90deg);
+}
+
+.footer__social-media-icon[alt="Ícono de Instagram"]:hover {
+  filter: hue-rotate(180deg);
+}
+
+.footer__social-media-icon[alt="Ícono de Twitter"]:hover {
+  filter: hue-rotate(270deg);
+}
+
+@media (max-width: 768px) {
+  .ofertas__cards--elemento {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .ofertas__cards--elemento {
+    flex: 1 1 100%;
+  }
+
+  .ofertas__titulo--texto {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__logo-container {
+    margin-bottom: 20px;
+  }
+
+  .footer__info-container {
+    text-align: center;
+  }
+
+  .footer__social-media-icons {
+    gap: 10px;
+  }
 }
